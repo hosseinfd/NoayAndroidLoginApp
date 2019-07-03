@@ -1,7 +1,9 @@
 package com.example.myapplication.Fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
@@ -10,8 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.example.myapplication.Activity.Register;
 import com.example.myapplication.R;
 
@@ -20,6 +22,7 @@ public class ConfirmMobFragment extends Fragment implements View.OnClickListener
     TextView mobNum, backToLogin, timer;
     TextInputEditText inputCode;
     String mob;
+    private CountDownTimer countDownTimer;
 
     public static ConfirmMobFragment newInstance(String mobNum) {
         ConfirmMobFragment mobFragment = new ConfirmMobFragment();
@@ -46,8 +49,26 @@ public class ConfirmMobFragment extends Fragment implements View.OnClickListener
         mobNum.setText(editedMob);
         btnConfrim.setOnClickListener(this);
 
+        timeCounter();
 
         return rootView;
+    }
+
+    private void timeCounter() {
+
+        countDownTimer = new CountDownTimer(12 * 1000, 1000) {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timer.setText("" + millisUntilFinished / 1000);
+            }
+
+            @Override
+            public void onFinish() {
+                timer.setText("0");
+            }
+        };
+        countDownTimer.start();
     }
 
     @Override
