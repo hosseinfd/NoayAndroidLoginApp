@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_enter">برای ورود، شماره موبایل خود را وارد کنید:</string>
+    <string name="btn_getcode_text">دریافت کد تأیید</string>
+    <string name="hint_edittext_mob">09xxxxxxxx</string>
+    <string name="sms_sent_message">کد تأیید به شماره زیر SMS شد</string>
+    <string name="enter_code">کد را وارد کنید</string>
+    <string name="code_confirm_hint">کد</string>
+    <string name="code_confrim_btnText">تأیید</string>
+    <string name="back_to_login"><u>بازگشت؟</u></string>
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_enter_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="@string/enter_code"
+            android:textColor="@color/black"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_sent_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="@string/sms_sent_message"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_mob_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="+98 914 346 9807"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ed1"
+                    android:layout_below="@+id/login_text_view_login_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:textColorHint="@color/black"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/CustomEditTextStyleWhite"
+                    app:boxStrokeColor="@color/black"
+            >
+
+
+                <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:digits="0123456789"
+                        android:maxLines="1"
+                        android:drawableRight="@drawable/ic_dialpad_black_24dp"
+                        android:hint="کد تایید"
+                        android:maxLength="5"
+                        android:textColor="@color/black"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/ed1"
+                android:layout_alignStart="@id/ed1"
+                android:text="1:59"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_alignLeft="@id/ed1" />
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/ed1"
+                android:layout_alignEnd="@id/ed1"
+                android:text="@string/back_to_login"
+                android:textColor="#B71C1C"
+                android:textSize="17sp"
+                android:layout_alignRight="@id/ed1" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_confirm_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="@drawable/button_shape"
+            android:text="@string/code_confrim_btnText"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
